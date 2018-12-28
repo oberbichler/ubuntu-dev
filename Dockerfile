@@ -7,11 +7,11 @@ ENV MINICONDA_URL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x8
 RUN apt-get update && apt-get -y upgrade
 
 RUN apt-get install -y \
-    curl \
-    libboost-all-dev \
     bzip2 \
-    libeigen3-dev \
+    curl \
     gcc \
+    libboost-all-dev \
+    libeigen3-dev \
     ninja-build \
     pybind11-dev
 
