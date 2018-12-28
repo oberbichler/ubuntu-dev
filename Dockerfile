@@ -1,5 +1,7 @@
 FROM ubuntu
 
+ENV HOME /root
+
 ENV MINICONDA_URL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 RUN apt-get update && apt-get -y upgrade
