@@ -14,8 +14,8 @@ RUN apt-get install -y \
     ninja-build \
     pybind11-dev
 
-RUN curl ${MINICONDA_URL} -o ${HOME}/miniconda.sh && \
-    bash ${HOME}/miniconda.sh -b -p $HOME/miniconda && \
-    rm -f ${HOME}/miniconda.sh
+RUN curl $MINICONDA_URL -o $HOME/miniconda.sh && \
+    bash $HOME/miniconda.sh -b -p $HOME/miniconda && \
+    rm -f $HOME/miniconda.sh
 
-WORKDIR ${HOME}
+WORKDIR $HOME
