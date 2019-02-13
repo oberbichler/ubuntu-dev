@@ -9,7 +9,7 @@ RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y \
     bzip2 \
     curl \
-    gcc \
+    g++ \
     libboost-all-dev \
     libeigen3-dev \
     ninja-build \
@@ -18,5 +18,8 @@ RUN apt-get install -y \
 RUN curl $MINICONDA_URL -o $HOME/miniconda.sh && \
     bash $HOME/miniconda.sh -b -p $HOME/miniconda && \
     rm -f $HOME/miniconda.sh
+
+RUN source $HOME/miniconda/bin/activate && \
+    conda install -y ipython numpy scipy
 
 WORKDIR $HOME
