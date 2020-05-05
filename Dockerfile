@@ -4,7 +4,7 @@ ENV HOME /root
 
 ENV MINICONDA_URL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
-RUN apt-get update -y && apt-get upgrade -y
+RUN apt-get update -y
 
 RUN apt-get install -y curl bzip2 && \
     curl $MINICONDA_URL -o $HOME/miniconda.sh && \
